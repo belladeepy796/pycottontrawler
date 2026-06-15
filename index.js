@@ -1,6 +1,6 @@
 'use strict';
 const { EventEmitter } = require('events');
-const APP = 'retry-client-495c68';
+const APP = 'retry-client-8baa94';
 class Service extends EventEmitter {
   constructor() { super(); this.name = APP; this.count = 0; }
   process(data) { this.count++; this.emit('data', { seq: this.count, input: data, service: this.name }); return this.count; }

